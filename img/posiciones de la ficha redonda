@@ -1,0 +1,4 @@
+  image(ficha1,390,210);
+  image(ficha1,390,290);
+  image(ficha1,390,370);
+  image(ficha1,390,450);

@@ -1,11 +1,21 @@
 void TresEnRallaDosJugadores() {
-  byte espaciosLibres = DibuixaTaulell();
+  DibuixaTaulell();
 
-  if (espaciosLibres == 0) {
+  if (EspaciosLibres() == 0) {
     ganador = checkWinner();
     gameState = 2;
     text("El jugador " + ganador + " ha ganado!", 500, 120, 20);
   }
+}
+
+byte EspaciosLibres() {
+  byte espaciosLibres = 0;
+  for (int i = 0; i < tablero.length; i++) {
+    for (int j = 0; j < tablero[i].length; j++) {
+      if (tablero[i][j] == 0) espaciosLibres++;
+    }
+  }
+  return espaciosLibres;
 }
 
 void TresEnRallaMaquina() {
@@ -56,6 +66,6 @@ byte checkWinner() {
 void ComprobacionGanador() {
   if (checkWinner() != 0) {
     DibuixaTaulell();
-    gameState *=2;
+    gameState =2;
   }
 }

@@ -15,6 +15,14 @@ void setup() {
   line(690,510,690,210);// linea vertical 2
   line(790,410,490,410);// linea horizontal 1
   line(790,310,490,310);// linea horizontal 2
+  /*Fichas del juego
+  float CIRCLE = 70;
+  fill(255,0,0);
+  ellipse(430,240,CIRCLE,CIRCLE); 
+  ellipse(430,320,CIRCLE,CIRCLE);
+  ellipse(430,400,CIRCLE,CIRCLE);
+  ellipse(430,480,CIRCLE,CIRCLE);*/
+  
 }
 
   

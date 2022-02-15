@@ -23,6 +23,16 @@ void setup() {
   ellipse(430,400,CIRCLE,CIRCLE);
   ellipse(430,480,CIRCLE,CIRCLE);*/
   
+  /*
+  PImage ficha2;
+  ficha2 = loadImage("../img/FICHA2.png");
+  //ficha azul posiciones
+  image(ficha2,790,210);
+  image(ficha2,790,290);
+  image(ficha2,790,370);
+  image(ficha2,790,450);
+  rect(490,210,300,300);
+  
 }
 
   

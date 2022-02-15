@@ -1,9 +1,8 @@
 
 static byte[][] tablero = new byte[3][3];
-static boolean playerTurn = false;
+static boolean playerTurn = false; //Contra la màquina, false = màquina, true = jugador.
 static boolean dragging = false;
 static byte gameState = 1; //0 = menu, 1 = 1v1, 2 = 1v1 end, -1 = mann vs machine, -2 = mvm end
-static boolean contraLaMaquina = false;
 byte ganador;
 
 
@@ -38,14 +37,12 @@ void setup() {
   
 void draw() {
   //fondo();
-  
   if(gameState == 1) {
-    TresEnRalla(); //LogicaJuego  
+    TresEnRallaDosJugadores(); //LogicaJuego  
   } else {
     fill(255,0,0);
     ellipse(mouseX,mouseY,10,10);
   }
-  
   
 }
 
@@ -66,7 +63,7 @@ void mousePressed() {
   */
   
   if(gameState == 1 || gameState == -1) {
-    DibujaFicha(); //LogicaJuego
+    DibujaFicha(); //EntornGrafic
     ComprobacionGanador(); //LogicaJuego
   }
 

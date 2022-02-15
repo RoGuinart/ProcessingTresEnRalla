@@ -1,4 +1,4 @@
-void TresEnRalla() {
+void TresEnRallaDosJugadores() {
   byte espaciosLibres = DibuixaTaulell();
 
   if (espaciosLibres == 0) {
@@ -6,6 +6,10 @@ void TresEnRalla() {
     gameState = 2;
     text("El jugador " + ganador + " ha ganado!", 500, 120, 20);
   }
+}
+
+void TresEnRallaMaquina() {
+  
 }
 
 void DibujaFicha() {
@@ -30,7 +34,7 @@ void DibujaFicha() {
 
 byte checkWinner() {
   //Diagonals
-  if ( (tablero[0][0] == tablero[1][1] && tablero[1][1] == tablero[2][2])  //Diagonal \
+  if ( (tablero[0][0] == tablero[1][1] && tablero[1][1] == tablero[2][2])   //Diagonal \
     || (tablero[0][2] == tablero[1][1] && tablero[1][1] == tablero[2][0]) ) //Diagonal /
   {
     return tablero[1][1];
@@ -38,7 +42,7 @@ byte checkWinner() {
 
   //Horitzontal i vertical
   for (int i = 0; i < tablero.length; i++) {
-    if ( (tablero[i][0] == tablero[i][1] && tablero[i][1] == tablero[i][2])  //Horitzontal
+    if ( (tablero[i][0] == tablero[i][1] && tablero[i][1] == tablero[i][2])   //Horitzontal
       || (tablero[0][i] == tablero[1][i] && tablero[1][i] == tablero[2][i]) ) //Vertical
     {
       return tablero[i][i];

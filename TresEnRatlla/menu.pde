@@ -98,9 +98,10 @@ void menuFinalJoc() {
 }
 
 void Taulell() {
-    rect(490,210,300,300);
-    line(590,510,590,210);  // linea vertical 1
-    line(690,510,690,210);  // linea vertical 2
-    line(790,410,490,410);  // linea horizontal 1
-    line(790,310,490,310);  // linea horizontal 2
+    fondo();
+    rect(500,200,300,300);
+    line(600,500,600,200);  // linea vertical 1
+    line(700,500,700,200);  // linea vertical 2
+    line(800,400,500,400);  // linea horizontal 1
+    line(800,300,500,300);  // linea horizontal 2
 }

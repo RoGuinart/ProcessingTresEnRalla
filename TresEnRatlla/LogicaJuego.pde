@@ -24,15 +24,15 @@ void TresEnRallaMaquina() {
 
 void DibujaFicha() {
   int posX, posY;
-  if (mouseX > 490 && mouseX < 790
-    && mouseY > 210 && mouseY < 510)
+  if (mouseX > 500 && mouseX < 800
+    && mouseY > 200 && mouseY < 500)
   {
-    if (mouseX < 590)      posX = 0;
-    else if (mouseX < 690) posX = 1;
+    if (mouseX < 600)      posX = 0;
+    else if (mouseX < 700) posX = 1;
     else                   posX = 2;
 
-    if (mouseY < 310)      posY = 0;
-    else if (mouseY < 410) posY = 1;
+    if (mouseY < 300)      posY = 0;
+    else if (mouseY < 400) posY = 1;
     else                   posY = 2;
 
     if (tablero[posX][posY] == 0) {

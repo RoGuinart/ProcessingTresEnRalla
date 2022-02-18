@@ -1,4 +1,3 @@
-
 static byte[][] tablero = new byte[3][3];
 static byte[][] posicionFichas = new byte[2][4]; //0 = al costat del taulell, 1 = dragging, 2 = al taulell.
 static boolean playerTurn = false; //Contra la màquina, false = màquina, true = jugador.
@@ -15,7 +14,6 @@ void setup() {
 
 
 void draw() {
-  //a
   switch(gameState) {
     case 0:
       menuPrincipal();
@@ -31,31 +29,24 @@ void draw() {
       print("Error", 500, 500, 100);
   }
 
+  if(dragging) drag();
 }
 
 void mousePressed() {
-  /*
-     +---+---+---+
-     |490|590|690|
-     |210|210|210|
-     +---+---+---+
-     |490|590|690|
-     |310|310|310|
-     +---+---+---+
-     |490|590|690|
-     |410|410|410|
-     +---+---+---+
-
-     Todo es 100x100
-  */
 
   if(abs(gameState) == 1) {
+    checkDrag();
     DibujaFicha(); //LogicaJuego
     DibuixaTaulell(); //EntornGrafic
     ComprobacionGanador(); //LogicaJuego
   }
 
 }
+
+void mouseReleased() {
+  dragging = false;
+}
+
 void changeState(int newState) {
   fondo();
   previousState = gameState;

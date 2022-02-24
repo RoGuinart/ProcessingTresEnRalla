@@ -99,6 +99,8 @@ void menuFinalJoc() {
 
 void Taulell() {
     fondo();
+    rectMode(CORNER);
+    fill(255);
     rect(500,200,300,300);
     line(600,500,600,200);  // linea vertical 1
     line(700,500,700,200);  // linea vertical 2

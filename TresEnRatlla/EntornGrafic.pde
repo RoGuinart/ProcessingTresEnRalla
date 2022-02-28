@@ -1,6 +1,5 @@
 void DibuixaTaulell() {
   Taulell();
-  rectMode(CORNER);
   for (int i = 0; i < tablero.length; i++) {
     for (int j = 0; j < tablero[i].length; j++) {
       PintaQuadres(500 + 100*i, 200 + 100*j, tablero[i][j]);
@@ -10,7 +9,6 @@ void DibuixaTaulell() {
     drawFichas();
   
 }
-
 
 void PintaQuadres(int x, int y, byte turn) {
   
@@ -34,5 +32,5 @@ void fondo() {
   fons = loadImage("../img/fons.jpg");
   image(fons,1280/2,720/2);
   */
-  background(128);
+  background(200);
 }

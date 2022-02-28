@@ -26,7 +26,7 @@ void menuPrincipal() {
   fill(0);
   text("Jugar contra la màquina", boxX, boxY, boxW, boxH);
   if(colour == 200 && mousePressed) {
-    changeState(-2);
+    changeState(-1);
     return;
   }
 

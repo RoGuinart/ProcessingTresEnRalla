@@ -22,9 +22,7 @@ byte EspaciosLibres() {
   return espaciosLibres;
 }
 
-void TresEnRallaMaquina() {
 
-}
 
 
 //Quan els dos jugadors han posat quatre fitxesi no hi ha guanyador, es posa l'última fitxa automàticament.

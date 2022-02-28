@@ -1,5 +1,5 @@
 static byte[][] tablero = new byte[3][3];
-static byte[][] posicionFichas = new byte[2][4]; //0 = al costat del taulell, 1 = dragging, 2 = al taulell.
+static byte[][] posicionFichas = new byte[2][4]; //0 = al costat del taulell, 1 = dragging, 2 = al taulell. -1 = movent per la màquina
 static boolean playerTurn = false; //Contra la màquina, false = màquina, true = jugador.
 static boolean dragging = false;
 static byte gameState; //0 = menu principal, 1 = 1v1, 2 = joc acabat, -1 = contra la màquina, -2 = contra la màquina menú
@@ -26,10 +26,14 @@ void draw() {
       menuFinalJoc();
       break;
     case -2:
-      changeState(1);
+      changeState(-1);
+      break;
+    case -1:
+      DibuixaTaulell(); //EntornGrafic
+      if(machineTurn == playerTurn && shitNumber < 4) TresEnRallaMaquina();
       break;
     default:
-      print("Error", 500, 500, 100);
+      print("Error");
   }
 
   if(dragging) drag();
@@ -52,6 +56,9 @@ void changeState(int newState) {
   if(abs(newState) == 1) {
     if(newState == 1) {
       playerTurn = false;
+    } else {
+      shitNumber=0;
+      machineState=0;
     }
     
     //Reiniciem el taulell i les fitxes

@@ -19,17 +19,16 @@ void draw() {
       menuPrincipal();
       break;
     case 1:
-
-      TresEnRallaDosJugadores();
+      TresEnRalla();
       break;
     case 2:
       menuFinalJoc();
       break;
     case -2:
-      changeState(-1);
+      menuContraLaMaquina();
       break;
     case -1:
-      DibuixaTaulell(); //EntornGrafic
+      TresEnRalla(); //LogicaJuego
       if(machineTurn == playerTurn && shitNumber < 4) TresEnRallaMaquina();
       break;
     default:
@@ -47,6 +46,10 @@ void mousePressed() {
     ComprobacionGanador(); //LogicaJuego
   }
 
+}
+
+void mouseReleased() {
+  pressed = false; //menu
 }
 
 //Canvia l'estat del joc.

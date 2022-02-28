@@ -1,4 +1,4 @@
-void TresEnRallaDosJugadores() {
+void TresEnRalla() {
   DibuixaTaulell();
 
   if (EspaciosLibres() <= 1) {

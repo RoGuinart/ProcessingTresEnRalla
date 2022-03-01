@@ -71,7 +71,7 @@ void menuFinalJoc() {
 
   if(ganador != 0) {
     String winnerString = ganador == -1 ? "azul" : "rojo";
-    text("El ganador es " + winnerString +"!", 1280/2, 150);
+    text("El guanyador es " + winnerString +"!", 1280/2, 150);
   } else {
     text("Heu empatat!", 1280/2, 150);
   }
@@ -129,7 +129,7 @@ void menuContraLaMaquina(){
   rect(boxX, boxY, boxW, boxH, 10); //Títol
   //Text
   fill(0);
-  text("Contra la maquina", boxX, boxY, boxW, boxH);
+  text("Contra la màquina", boxX, boxY, boxW, boxH);
 
 
   //Cuadre comences tu
@@ -154,7 +154,7 @@ void menuContraLaMaquina(){
   rect(boxX, boxY, boxW, boxH, 10); //1v1
   //Text
   fill(0);
-  text("Comença la maquina", boxX, boxY, boxW, boxH);
+  text("Comença la màquina", boxX, boxY, boxW, boxH);
   if(colour == 200 && mousePressed && !pressed) {
     pressed = true;
     playerTurn = false;
@@ -169,7 +169,7 @@ void menuContraLaMaquina(){
   rect(boxX, boxY, boxW, boxH, 10); //Tornar al menu
   //Text
   fill(0);
-  text("Tornar al menu", boxX, boxY, boxW, boxH);
+  text("Tornar al menú", boxX, boxY, boxW, boxH);
   if(colour == 200 && mousePressed && !pressed) {
     pressed = true;
     changeState(0);
